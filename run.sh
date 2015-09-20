@@ -22,7 +22,15 @@ if [ ! -f /.redis_configured ]; then
         echo "Please remember to change the above password as soon as possible!"
         echo "========================================================================"
     fi
-
+    
+    if [ -n "${REDIS_SALVE_IP}" ]; then
+        IP=${REDIS_SALVE_IP}
+        PORT=${REDIS_SALVE_PORT}
+        echo "=> Slave of redis server  ${REDIS_SALVE_IP} ${REDIS_SALVE_PORT}"
+        echo "slaveof $IP $PORT" >> /etc/redis/redis_default.conf
+        echo "=> Done!"
+    fi
+    
     unset REDIS_PASS
 
     # Backwards compatibility
