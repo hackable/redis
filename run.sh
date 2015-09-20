@@ -26,7 +26,7 @@ if [ ! -f /.redis_configured ]; then
     if [ -n "${REDIS_MASTER_IP}" ]; then
         IP=${REDIS_MASTER_IP}
         PORT=${REDIS_MASTER_PORT}
-        echo "=> Slave of redis server  ${REDIS_SALVE_IP} ${REDIS_SALVE_PORT}"
+        echo "=> Slave of redis server  ${REDIS_MASTER_IP} ${REDIS_MASTER_PORT}"
         echo "slaveof $IP $PORT" >> /etc/redis/redis_default.conf
         echo "=> Done!"
     fi
