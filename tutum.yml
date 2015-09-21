@@ -4,3 +4,5 @@ redis:
     - 6379:6379
   environment:
     - REDIS_PASS="**ChangeMe**"
+    - REDIS_MASTER_IP="**ChangeMe**"
+    - REDIS_MASTER_PORT="**ChangeMe**"
