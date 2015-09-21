@@ -31,6 +31,8 @@ if [ ! -f /.redis_configured ]; then
         echo "=> Done!"
     fi
     
+    unset REDIS_MASTER_IP
+    unset REDIS_MASTER_PORT
     unset REDIS_PASS
 
     # Backwards compatibility
