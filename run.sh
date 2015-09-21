@@ -23,7 +23,7 @@ if [ ! -f /.redis_configured ]; then
         echo "========================================================================"
     fi
     
-    if [ -n "${REDIS_MASTER_IP}" ]; then
+    if [ "${REDIS_MASTER_IP}" != "**None**" ]; then
         IP=${REDIS_MASTER_IP}
         PORT=${REDIS_MASTER_PORT}
         echo "=> Slave of redis server  ${REDIS_MASTER_IP} ${REDIS_MASTER_PORT}"
