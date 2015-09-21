@@ -1,5 +1,5 @@
 redis:
-  image: tutum.co/rohan/redis:latest
+  image: tutum.co/rohan/redis
   ports:
     - 6379:6379
   environment:
