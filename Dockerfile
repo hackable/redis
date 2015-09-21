@@ -7,6 +7,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv C7917B12 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN echo nameserver 8.8.8.8 > /etc/resolv.conf
+RUN echo nameserver 8.8.4.4 > /etc/resolv.conf
+
 # Add scripts
 ADD run.sh /run.sh
 
