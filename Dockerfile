@@ -12,6 +12,8 @@ ADD run.sh /run.sh
 
 ENV REDIS_PASS **Random**
 ENV REDIS_DIR /data
+ENV REDIS_MASTER_IP **None**
+ENV REDIS_MASTER_PORT **None**
 VOLUME ["/data"]
 
 EXPOSE 6379
